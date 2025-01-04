@@ -1,0 +1,80 @@
+/* 一番上の図形へのスタイル適用 */
+#top {
+    width: 800px;
+    background-color:#dcc9f4;
+    padding-top: 20px;
+    padding-bottom:20px;
+    margin: 20px auto;   /*3行で空白をかいた*/
+    text-align: center;
+        }
+ .top-child{
+    display: inline-block;
+    background-color:#ffd9df;
+    width: 20%;
+    margin: 0 auto;
+            }
+
+
+
+/*真ん中の図形へのスタイル適用*/
+#middle {
+    width: 800px;
+    height: 800px;
+    background-color:#ffd9df;
+    margin:40px auto;    /*相殺で上下間隔が20pxあればよい*/
+    position: relative; /* absoluteをしたいので親要素の位置を相対的にする */
+       }
+  #middle-child01 {
+      width: 200px;
+      height: 200px;
+      background-color:#87ceeb;
+      top: 100px;
+      left: 100px;
+      position: absolute;
+        }
+  #middle-child02 {
+      width: 200px;
+      height: 200px;
+      background-color:#87ceeb; 
+      top: 300px;
+      left: 300px;
+      position: absolute;
+        }
+  #middle-child03 {
+      width: 200px;
+      height: 200px;
+      background-color:#87ceeb;
+      top: 500px;
+      left: 500px;
+      position: absolute;
+       } 
+
+
+
+/*一番下の図形へのスタイル適用*/
+#bottom {
+    width: 800px;
+    height: 300px;
+    background-color:#87ceeb;
+    margin: 0 auto;
+      }
+  #bottom-child01{
+     width: 400px;
+     height: 100px;
+     background-color:#e5dcf0;
+     position: relative; /*本来の表示場所から*/
+      }
+  #bottom-child02 {
+     width: 400px;
+     height: 100px;
+     background-color:#e5dcf0;
+     position: relative; /*本来の表示場所から*/
+     left: 200px;
+        }
+  #bottom-child03 {
+     width: 400px;
+     height: 100px;
+     background-color:#e5dcf0;
+     position: relative;/*本来の表示場所から*/
+     left: 400px; 
+               }
