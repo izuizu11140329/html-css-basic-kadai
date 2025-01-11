@@ -1,0 +1,81 @@
+h1,p,body {
+    margin: 0;
+          } /*各要素にはデフォルトで要素の外側に余白が設定されていることがあるから先にクリアにする作業*/
+
+p,a {
+    font-size: 20px;
+    }
+     
+    header {
+    margin-bottom: 20px;
+    background-color:rgb(244, 79, 79); 
+    text-align: center;
+          }
+    h1 {
+    color: rgb(255, 255, 255);
+     }    
+
+main {
+    margin: 10px; /*mainは上下左右の空白が10pxである*/
+  }
+
+  #parent {
+     display: flex; /*displayプロパティを使い、id名parentの要素をFlexコンテナ化する*/
+    justify-content: space-around; /*アイテムの横方向（主軸）の揃え方と一番左と一番右のアイテムも含め、均等な間隔で配置する*/
+  }
+    .contents{
+       border: solid 3px rgb(238, 204, 204);
+       flex-basis: 25%;  /* 幅は親要素の２５%、　widthは使わない*/
+       padding : 10px 15px;
+       margin: 20px 0 ;
+       text-align: center;
+  }
+
+  h2{
+    font-size: 25px ;
+    border-bottom:3px dotted rgb(236, 122, 122);
+  }
+
+  h2::before {
+    content: "●";  /* contetはセットだから*/
+    color: rgb(239, 111, 139);  
+       }
+
+
+  /* class名contents内の二番目のp要素内のテキストの中で一番目の文字にのみ */
+   p:nth-child(3)::first-letter{ 
+   font-weight: bold;
+   color:rgb(97, 206, 249);
+  }
+ 
+  .contents img{
+    margin:10px 0;
+    width: 70%
+ }
+ footer {
+    background-color:rgb(244, 79, 79);
+    text-align: center;
+}
+
+ a:link{
+    color: rgb(255, 255, 255); /*リンク未訪問*/
+       }
+ a:visited{                      /*リンク訪問済み*/
+    color:rgb(193, 234, 251);
+       }
+ a:hover{    /* マウスの上にカーソルが乗っている時*/
+    color:rgb(245, 178, 168);
+      }
+
+@media screen and (max-width: 768px){/* 画面幅768px以下になったら表示が変わる*/
+      h2 {
+        font-size: 30px;
+    }
+      p {
+        font-size: 25px;
+    }
+    #parents {
+    display: block;
+    flex-direction: column; /* Flexboxコンテナであるid名parent内の要素が縦に並ぶ。上から下に。 */
+    }
+}
